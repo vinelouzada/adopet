@@ -4,13 +4,12 @@ class Telefone
 {
     private string $telefone;
 
-
     public function __construct(string $telefone)
     {
         $formatacaoValida = $this->validaFormatacao($telefone);
 
         if ($formatacaoValida === false) {
-            header("Location: index.php?erro=1");
+            header("Location: index.php?erro=Telefone");
             die();
         }
 
@@ -20,11 +19,7 @@ class Telefone
 
     private function validaFormatacao(string $telefone):bool
     {
-        if(preg_match("/^\([0-9]{2}\) 9?[0-9]{4}\-[0-9]{4}$/", $telefone) === false){
-            return false;
-        }
-
-        return true;
+        return preg_match("/^\([0-9]{2}\) 9?[0-9]{4}\-[0-9]{4}$/", $telefone);
     }
 
     private function limpaFormatacao($telefone):string

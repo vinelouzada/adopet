@@ -4,7 +4,7 @@ class PessoaFisica extends Pessoa implements JsonSerializable
 {
     private Cpf $cpf;
 
-    public function __construct(string $nome, string $email, Cpf $cpf, Endereco $endereco, Data $data, Telefone $telefone)
+    public function __construct(string $nome, string $email, Cpf $cpf, Endereco $endereco, DataNascimento $data, Telefone $telefone)
     {
         parent::__construct($nome, $email, $endereco, $data, $telefone);
 

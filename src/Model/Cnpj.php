@@ -13,7 +13,7 @@ class Cnpj
         $validacaoDigitosVerificadores = $this->validaDigitosVerificadores($cnpj);
 
         if ($validacaoDigitosVerificadores === false OR $formatacaoValida === false){
-            header("Location: index.php?erro=1");
+            header("Location: index.php?erro=CNPJ");
             die();
         }
 
@@ -22,11 +22,7 @@ class Cnpj
 
     private function validaFormatacao(string $cnpj):bool
     {
-        if (preg_match("/^[0-9]{2}\.[0-9]{3}\.[0-9]{3}\/[0-9]{4}\-[0-9]{2}$/", $cnpj) == false){
-            return false;
-        }
-
-        return true;
+        return preg_match("/^[0-9]{2}\.[0-9]{3}\.[0-9]{3}\/[0-9]{4}\-[0-9]{2}$/", $cnpj);
     }
 
     private function limpaFormatacao(string $cnpj): string

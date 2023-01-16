@@ -1,6 +1,6 @@
 <?php
 
-class Data
+class DataNascimento
 {
     private string $data;
     public function __construct(string $data)
@@ -17,7 +17,7 @@ class Data
         $numerosValidos = $this->validaNumeros($dia, $mes, $ano);
 
         if ($formatacaoValida === false OR $numerosValidos === false){
-            header("Location: index.php?erro=1");
+            header("Location: index.php?erro=Data De Nascimento");
             die();
         }
 
@@ -30,11 +30,8 @@ class Data
     }
     private function validaFormatacao(string $data): bool
     {
-        if (preg_match("/^[0-9]{4}\-[0-9]{2}\-[0-9]{2}$/", $data) == false) {
-            return false;
-        }
 
-        return true;
+        return preg_match("/^[0-9]{4}\-[0-9]{2}\-[0-9]{2}$/", $data);
     }
 
     private function validaNumeros(int $dia, int $mes, int $ano): bool

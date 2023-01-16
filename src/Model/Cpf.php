@@ -11,7 +11,7 @@ class Cpf
         $validacaoDigitosVerificadores = $this->validaDigitosVericadores($cpf);
 
         if ($validacaoDigitosVerificadores === false OR $formatacaoValida === false){
-            header("Location: index.php?erro=1");
+            header("Location: index.php?erro=CPF");
             die();
         }
 
@@ -19,11 +19,7 @@ class Cpf
     }
     private function validaFormatacao(string $cpf): bool
     {
-        if (preg_match("/^[0-9]{3}\.[0-9]{3}\.[0-9]{3}\-[0-9]{2}$/", $cpf) == false) {
-            return false;
-        }
-
-        return true;
+        return  preg_match("/^[0-9]{3}\.[0-9]{3}\.[0-9]{3}\-[0-9]{2}$/", $cpf);
     }
 
     private function validaDigitosVericadores($cpf):bool

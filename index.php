@@ -27,7 +27,7 @@
         </div>
         <?php if (isset($_GET['erro'])):?>
             <div class="error">
-                <p>Os campos abaixo estão incorretos</p>
+                <p>O campo de <?= $_GET['erro'] ?> está incorreto</p>
             </div>
         <?php endif; ?>
         <form class="formulario" method="post" action="cadastro-form.php" autocomplete="off">

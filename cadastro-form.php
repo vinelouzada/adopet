@@ -1,7 +1,7 @@
 <?php
 
 require_once __DIR__."/src/Model/Cpf.php";
-require_once __DIR__."/src/Model/Data.php";
+require_once __DIR__ . "/src/Model/DataNascimento.php";
 require_once __DIR__."/src/Model/Telefone.php";
 require_once __DIR__."/src/Model/Endereco.php";
 require_once __DIR__."/src/Model/Cnpj.php";
@@ -24,7 +24,7 @@ $telefoneForm = filter_input(INPUT_POST,"telefone");
 
 
 $endereco = new Endereco($cepForm,$cidadeForm,$estadoForm, $logradouroForm, $bairroForm, $numeroForm);
-$data = new Data($dataForm);
+$data = new DataNascimento($dataForm);
 $telefone = new Telefone($telefoneForm);
 
 if ($cpfForm !== null){

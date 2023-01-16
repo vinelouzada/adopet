@@ -14,7 +14,7 @@ class Endereco
         $formatacaoValida = $this->validaFormatacao($cep);
 
         if ($formatacaoValida === false){
-            header("Location: index.php?erro=1");
+            header("Location: index.php?erro=Endereco");
             die();
         }
 
@@ -30,11 +30,7 @@ class Endereco
 
     private function validaFormatacao(string $cep): bool
     {
-        if (preg_match("/^[0-9]{5}\-[0-9]{3}$/", $cep) == false){
-            return false;
-        }
-
-        return true;
+        return preg_match("/^[0-9]{5}\-[0-9]{3}$/", $cep);
     }
 
     private function limpaFormatacao(string $cep):string
