@@ -9,7 +9,7 @@ require_once __DIR__ . "/src/Model/Pessoa.php";
 require_once __DIR__. "/src/Model/PessoaFisica.php";
 require_once __DIR__. "/src/Model/PessoaJuridica.php";
 
-$nomeForm = filter_input(INPUT_POST,"nome",FILTER_UNSAFE_RAW);
+$nomeForm = filter_input(INPUT_POST,"nome");
 $emailForm = filter_input(INPUT_POST,"email");
 $cpfForm = filter_input(INPUT_POST,"cpf");
 $cnpjForm = filter_input(INPUT_POST,"cnpj");

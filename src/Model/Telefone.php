@@ -20,7 +20,7 @@ class Telefone
 
     private function validaFormatacao(string $telefone):bool
     {
-        if(preg_match("/^\([0-9]{2}\)\ [0-9]{5}\-[0-9]{4}$/", $telefone) === false){
+        if(preg_match("/^\([0-9]{2}\) 9?[0-9]{4}\-[0-9]{4}$/", $telefone) === false){
             return false;
         }
 
