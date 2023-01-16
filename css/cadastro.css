@@ -1,0 +1,208 @@
+:root{
+    --azul-principal: #0073ff;
+    --verde-secundaria: #00d7ac;
+    --vermelha-secundaria: #ff7172;
+    --cinza-auxiliar: #f6f6f6;
+    --preta-auxiliar: #747482;
+    --branca: #FFF;
+}
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--azul-principal);
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.61);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.banner{
+    width: 450px;
+    height: 700px;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.banner img:hover{
+    transform: scale(1.1);
+    filter: saturate(200%) brightness(110%);
+}
+
+
+.container-formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    height: 700px;
+    background-color: var(--cinza-auxiliar);
+    transition: 1s;
+}
+
+.logo{
+    width: 220px;
+}
+
+.titulo{
+    width: 90%;
+    color: var(--vermelha-secundaria);
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 410px;
+    color: var(--preta-auxiliar);
+}
+
+.error{
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    padding: 7px;
+    background-color: var(--vermelha-secundaria);
+    border-radius: 10px;
+    color: var(--branca);
+    font-size: 14px;
+}
+
+
+
+.botoes-tipo-pessoa{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0px;
+}
+
+.botao{
+    padding: 8px;
+    border-radius: 15px;
+    border: 1px solid var(--preta-auxiliar);
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.botao:hover{
+    cursor: pointer;
+    scale: 1.05;
+}
+
+.ativo{
+    color: var(--branca);
+    background-color: var(--vermelha-secundaria);
+}
+
+.formulario__nome, .formulario__email, .formulario__endereco_logradouro, .formulario__cpf_telefone,
+.formulario__cpf, .formulario__cnpj, .formulario__telefone, .formulario__endereco, .formulario__endereco_cep, .formulario__endereco_cidade,
+.formulario__endereco_bairro, .formulario__endereco_estado, .formulario__endereco_numero,
+.formulario__endereco_bairro_estado_numero, .formulario__nome_data-nascimento, .formulario__data-nascimento{
+    display: flex;
+    margin: 4px 0px;
+    gap: 5px;
+}
+
+.formulario__cpf, .formulario__cnpj{
+    display: none;
+}
+
+.ativo-form{
+    display: flex;
+}
+
+.formulario__cpf, .formulario__cnpj, .formulario__telefone, .formulario__endereco_cep, .formulario__endereco_cidade,
+.formulario__endereco_bairro, .formulario__endereco_estado, .formulario__endereco_numero, .formulario__data-nascimento{
+    flex-direction: column;
+}
+
+.formulario__cpf, .formulario__cnpj, .formulario__telefone, .formulario__endereco_cep, .formulario__endereco_cidade, .formulario__data-nascimento{
+    width: 48%;
+}
+
+.formulario__endereco_bairro{
+    width: 40%;
+}
+
+.formulario__endereco_estado, .formulario__endereco_numero{
+    width: 25%;
+}
+
+.formulario__nome, .formulario__email, .formulario__endereco_logradouro{
+    flex-direction: column;
+}
+
+.formulario__cpf_telefone, .formulario__endereco, .formulario__endereco_bairro_estado_numero, .formulario__nome_data-nascimento{
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.formulario__endereco_logradouro{
+    width: 100%;
+}
+
+.formulario__nome input, .formulario__email input, .formulario__cpf_telefone input,
+.formulario__endereco input{
+    border-radius: 5px;
+    padding: 9px 4px;
+    border: 2px solid var(--preta-auxiliar);
+    outline: none;
+    transition: 0.5s;
+    font-size: 15px;
+}
+
+.formulario__data-nascimento input{
+    border-radius: 5px;
+    padding: 9px 7px;
+    border: 2px solid var(--preta-auxiliar);
+}
+
+.formulario__nome input:focus, .formulario__email input:focus,
+.formulario__cpf_telefone input:focus, .formulario__endereco input:focus{
+    border: 2px solid var(--vermelha-secundaria);
+}
+
+
+
+.botao-formulario{
+    display: flex;
+    margin: 0px auto;
+    padding: 10px;
+    color: var(--branca);
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    background-color: var(--vermelha-secundaria);
+    border: none;
+    transition: 0.5s;
+}
+
+.botao-formulario:hover{
+    cursor: pointer;
+    background-color: var(--verde-secundaria);
+    transform: scale(1.05);
+}
