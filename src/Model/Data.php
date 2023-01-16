@@ -3,10 +3,6 @@
 class Data
 {
     private string $data;
-    private string $ano;
-    private string $mes;
-    private string $dia;
-
     public function __construct(string $data)
     {
 
@@ -26,9 +22,6 @@ class Data
         }
 
         $this->data = $data;
-        $this->ano = $ano;
-        $this->mes = $mes;
-        $this->dia = $dia;
     }
 
     private function separaDiaMesAno(string $data):array
