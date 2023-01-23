@@ -4,7 +4,7 @@ class Cnpj
 {
 
     private string $cnpj;
-    private const PESO_12= [5,4,3,2,9,8,7,6,5,4,3,2];
+    private const PESO_12 = [5,4,3,2,9,8,7,6,5,4,3,2];
     private const PESO_13 = [6,5,4,3,2,9,8,7,6,5,4,3,2];
 
     public function __construct(string $cnpj)
@@ -74,7 +74,7 @@ class Cnpj
     }
 
 
-    public function recuperaNumero(): ?string
+    public function recuperaNumero(): string
     {
         return $this->cnpj;
     }

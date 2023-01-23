@@ -22,7 +22,7 @@ class Telefone
         return preg_match("/^\([0-9]{2}\) 9?[0-9]{4}\-[0-9]{4}$/", $telefone);
     }
 
-    private function limpaFormatacao($telefone):string
+    private function limpaFormatacao(string $telefone):string
     {
         return str_replace(["(",")","-"," "],"",$telefone);
     }

@@ -38,7 +38,7 @@
                 </div>
                 <div class="formulario__data-nascimento">
                     <label for="data">Data de nascimento</label>
-                    <input type="date" name="data" id="data" required>
+                    <input type="date" name="data" id="data" value="2017-20-01"required>
                 </div>
             </div>
             <div class="formulario__email">

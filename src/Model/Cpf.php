@@ -49,7 +49,7 @@ class Cpf
         return str_replace(['.','-'],"",$cpf);
     }
 
-    public function recuperaNumero(): ?string
+    public function recuperaNumero(): string
     {
         return $this->cpf;
     }
