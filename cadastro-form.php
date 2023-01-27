@@ -1,5 +1,4 @@
 <?php
-
 require_once __DIR__."/src/Model/Cpf.php";
 require_once __DIR__ . "/src/Model/DataNascimento.php";
 require_once __DIR__."/src/Model/Telefone.php";
