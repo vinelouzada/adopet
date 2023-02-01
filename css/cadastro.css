@@ -142,7 +142,7 @@ form{
     flex-direction: column;
 }
 
-.formulario__cpf, .formulario__cnpj, .formulario__telefone, .formulario__endereco_cep, .formulario__endereco_cidade, .formulario__data-nascimento{
+.formulario__nome,.formulario__cpf, .formulario__cnpj, .formulario__telefone, .formulario__endereco_cep, .formulario__endereco_cidade, .formulario__data-nascimento{
     width: 48%;
 }
 
