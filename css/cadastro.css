@@ -25,11 +25,12 @@ main{
     box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.61);
     border-radius: 10px;
     overflow: hidden;
+    height: 600px;
 }
 
 .banner{
     width: 450px;
-    height: 700px;
+    height: 600px;
     overflow: hidden;
 }
 
@@ -53,7 +54,7 @@ main{
     justify-content: center;
     align-items: center;
     width: 450px;
-    height: 700px;
+    height: 600px;
     background-color: var(--cinza-auxiliar);
     transition: 1s;
 }
@@ -124,7 +125,7 @@ form{
 .formulario__endereco_bairro, .formulario__endereco_estado, .formulario__endereco_numero,
 .formulario__endereco_bairro_estado_numero, .formulario__nome_data-nascimento, .formulario__data-nascimento{
     display: flex;
-    margin: 4px 0px;
+    margin: 2px 0px;
     gap: 5px;
 }
 
@@ -141,7 +142,7 @@ form{
     flex-direction: column;
 }
 
-.formulario__cpf, .formulario__cnpj, .formulario__telefone, .formulario__endereco_cep, .formulario__endereco_cidade, .formulario__data-nascimento{
+.formulario__nome,.formulario__cpf, .formulario__cnpj, .formulario__telefone, .formulario__endereco_cep, .formulario__endereco_cidade, .formulario__data-nascimento{
     width: 48%;
 }
 
@@ -170,7 +171,7 @@ form{
 .formulario__nome input, .formulario__email input, .formulario__cpf_telefone input,
 .formulario__endereco input{
     border-radius: 5px;
-    padding: 9px 4px;
+    padding: 6px 4px;
     border: 2px solid var(--preta-auxiliar);
     outline: none;
     transition: 0.5s;
@@ -179,7 +180,7 @@ form{
 
 .formulario__data-nascimento input{
     border-radius: 5px;
-    padding: 9px 7px;
+    padding: 6px 7px;
     border: 2px solid var(--preta-auxiliar);
 }
 
